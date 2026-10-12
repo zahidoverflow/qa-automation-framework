@@ -10,7 +10,7 @@ const args = process.argv.slice(2);
 const controllerArg = args[0] || process.env.DEFAULT_TEST_CONTROLLER || 'Pipeline_RegressionTestController.csv';
 
 console.log('='.repeat(70));
-console.log('🚀 EAL IT SOLUTIONS - PLAYWRIGHT AUTOMATION FRAMEWORK RUNNER');
+console.log('🚀 ENTERPRISE PLAYWRIGHT QA AUTOMATION FRAMEWORK RUNNER');
 console.log('='.repeat(70));
 
 // 1. Resolve CSV controller
@@ -88,7 +88,7 @@ const summaryHtml = `
 </head>
 <body>
   <div class="container">
-    <h1>EAL IT Solutions - Test Execution Summary</h1>
+    <h1>QA Automation Framework - Test Execution Summary</h1>
     <p><strong>Controller:</strong> ${path.basename(controllerPath)} | <strong>Platform:</strong> Architect Online Banking (Fiserv XD)</p>
     <div class="metrics">
       <div class="card card-total">

@@ -1,6 +1,6 @@
-# EAL IT Solutions - Playwright Test Automation Framework
+# Enterprise Playwright QA Automation Framework
 
-A production-grade, CSV-driven, data-centric Playwright test automation framework built for **Architect Online Banking (Fiserv XD)** platform testing.
+A production-grade, CSV-driven, data-centric Playwright test automation framework with Page Object Model (POM) architecture, pre-flight test validation, and CI/CD integration.
 
 ---
 
