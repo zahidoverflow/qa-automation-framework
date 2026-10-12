@@ -2,11 +2,11 @@
   "config": {
     "argv": [
       "/usr/bin/node",
-      "/mnt/data/git/job-hunter-automation/eal-qa-framework/node_modules/.bin/playwright",
+      "/mnt/data/git/qa-automation-framework/node_modules/.bin/playwright",
       "test"
     ],
-    "configFile": "/mnt/data/git/job-hunter-automation/eal-qa-framework/playwright.config.ts",
-    "rootDir": "/mnt/data/git/job-hunter-automation/eal-qa-framework/apps/test",
+    "configFile": "/mnt/data/git/qa-automation-framework/playwright.config.ts",
+    "rootDir": "/mnt/data/git/qa-automation-framework/apps/test",
     "failOnFlakyTests": false,
     "forbidOnly": false,
     "fullyParallel": false,
@@ -22,7 +22,7 @@
     "preserveOutput": "always",
     "projects": [
       {
-        "outputDir": "/mnt/data/git/job-hunter-automation/eal-qa-framework/test-results",
+        "outputDir": "/mnt/data/git/qa-automation-framework/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -30,11 +30,13 @@
         },
         "id": "chromium",
         "name": "chromium",
-        "testDir": "/mnt/data/git/job-hunter-automation/eal-qa-framework/apps/test",
+        "testDir": "/mnt/data/git/qa-automation-framework/apps/test",
         "testIgnore": [],
         "testMatch": [
           "**/loginSmoke.spec.ts",
-          "**/accountSummary.spec.ts"
+          "**/accountSummary.spec.ts",
+          "**/fundTransfer.spec.ts",
+          "**/achTemplates.spec.ts"
         ],
         "timeout": 30000
       }
@@ -43,19 +45,21 @@
       {
         "grep": {},
         "grepInvert": null,
-        "outputDir": "/mnt/data/git/job-hunter-automation/eal-qa-framework/test-results",
+        "outputDir": "/mnt/data/git/qa-automation-framework/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
           "actualWorkers": 2
         },
         "name": "chromium",
-        "testDir": "/mnt/data/git/job-hunter-automation/eal-qa-framework/apps/test",
-        "snapshotDir": "/mnt/data/git/job-hunter-automation/eal-qa-framework/apps/test",
+        "testDir": "/mnt/data/git/qa-automation-framework/apps/test",
+        "snapshotDir": "/mnt/data/git/qa-automation-framework/apps/test",
         "testIgnore": [],
         "testMatch": [
           "**/loginSmoke.spec.ts",
-          "**/accountSummary.spec.ts"
+          "**/accountSummary.spec.ts",
+          "**/fundTransfer.spec.ts",
+          "**/achTemplates.spec.ts"
         ],
         "timeout": 30000,
         "use": {
@@ -142,12 +146,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 850,
+                  "duration": 846,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-12T11:07:53.997Z",
+                  "startTime": "2026-10-12T11:52:54.387Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -157,6 +161,48 @@
           ],
           "id": "9227ada6a05c0338575f-70bcf7ff9ee1b092db9d",
           "file": "Regression/Accounts/accountSummary.spec.ts",
+          "line": 9,
+          "column": 3
+        }
+      ]
+    },
+    {
+      "title": "Regression/ACH/achTemplates.spec.ts",
+      "file": "Regression/ACH/achTemplates.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-728101: Verify dynamic ACH payment template creation with unique timestamp",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 2052,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-12T11:52:54.367Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e3b614ec9d5241446c3-c084b05c7e843a3bc0a7",
+          "file": "Regression/ACH/achTemplates.spec.ts",
           "line": 9,
           "column": 3
         }
@@ -181,15 +227,15 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 817,
+                  "duration": 720,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-12T11:07:53.988Z",
+                  "startTime": "2026-10-12T11:52:55.430Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -215,15 +261,15 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 800,
+                  "duration": 726,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-12T11:07:54.916Z",
+                  "startTime": "2026-10-12T11:52:56.162Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -235,15 +281,125 @@
           "file": "Regression/Login/loginSmoke.spec.ts",
           "line": 8,
           "column": 3
+        },
+        {
+          "title": "TC-472898: Verify user session termination and sign out redirect",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1379,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-12T11:52:56.902Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "212221bb32574e590250-c89b972d00060428fafa",
+          "file": "Regression/Login/loginSmoke.spec.ts",
+          "line": 8,
+          "column": 3
+        }
+      ]
+    },
+    {
+      "title": "Regression/Transfers/fundTransfer.spec.ts",
+      "file": "Regression/Transfers/fundTransfer.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-619201: Verify internal funds transfer between accounts",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 2017,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-12T11:52:56.650Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2375ad503ffb37edc0f3-4a950a04807a6afa6cd9",
+          "file": "Regression/Transfers/fundTransfer.spec.ts",
+          "line": 9,
+          "column": 3
+        },
+        {
+          "title": "TC-619202: Verify transfer validation when amount exceeds balance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1973,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-12T11:52:58.680Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2375ad503ffb37edc0f3-ab0ca86f7788f85ffc8d",
+          "file": "Regression/Transfers/fundTransfer.spec.ts",
+          "line": 9,
+          "column": 3
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-12T11:07:53.410Z",
-    "duration": 2375.696,
-    "expected": 3,
+    "startTime": "2026-10-12T11:52:53.666Z",
+    "duration": 7037.816,
+    "expected": 7,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

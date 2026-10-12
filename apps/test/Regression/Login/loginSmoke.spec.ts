@@ -25,6 +25,16 @@ for (const data of testCases) {
         'WrongPassword999!'
       );
       await loginPage.verifyLoginFailed();
+    } else if (data.testCaseID === 'TC-472898') {
+      // Sign out / session termination scenario
+      await loginPage.LogIn_UserPortal(
+        portalUrl,
+        process.env.USER_PORTAL_USERNAME || 'testuser@example.com',
+        process.env.USER_PORTAL_PASSWORD || 'SecurePassword123!'
+      );
+      await loginPage.verifyLoggedIn();
+      await loginPage.LogOut_UserPortal();
+      await loginPage.verifyLoggedOut();
     }
   });
 }

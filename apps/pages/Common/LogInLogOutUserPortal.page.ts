@@ -11,6 +11,8 @@ export class LogInLogOutUserPortalPageCl extends BasePage {
   private passwordInput = this.page.getByLabel('Password');
   private signInButton = this.page.getByRole('button', { name: /Sign In/i });
   private errorMessage = this.page.locator('.alert-error');
+  private signOutLink = this.page.getByRole('link', { name: /Sign Out/i });
+  private logoutNotice = this.page.locator('.alert-notice');
 
   // Action methods
   async LogIn_UserPortal(url: string, username: string, password: string): Promise<void> {
@@ -18,6 +20,11 @@ export class LogInLogOutUserPortalPageCl extends BasePage {
     await this.usernameInput.fill(username);
     await this.passwordInput.fill(password);
     await this.signInButton.click();
+    await this.page.waitForLoadState('networkidle');
+  }
+
+  async LogOut_UserPortal(): Promise<void> {
+    await this.signOutLink.click();
     await this.page.waitForLoadState('networkidle');
   }
 
@@ -30,5 +37,10 @@ export class LogInLogOutUserPortalPageCl extends BasePage {
   async verifyLoginFailed(): Promise<void> {
     await expect(this.errorMessage).toBeVisible();
     await expect(this.errorMessage).toContainText('Invalid username or password');
+  }
+
+  async verifyLoggedOut(): Promise<void> {
+    await expect(this.logoutNotice).toBeVisible();
+    await expect(this.logoutNotice).toContainText('You have been safely signed out.');
   }
 }
