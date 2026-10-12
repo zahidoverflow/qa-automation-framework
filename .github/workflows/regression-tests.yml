@@ -1,4 +1,4 @@
-name: Regression Tests
+name: Regression Tests & Live Report
 
 on:
   push:
@@ -11,6 +11,15 @@ on:
         description: 'Test Controller CSV file to execute'
         required: true
         default: 'Pipeline_RegressionTestController.csv'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   test:
@@ -37,17 +46,45 @@ jobs:
 
     - name: Run Playwright Regression Tests
       env:
-        USER_PORTAL_URL: ${{ secrets.USER_PORTAL_URL }}
-        USER_PORTAL_USERNAME: ${{ secrets.USER_PORTAL_USERNAME }}
-        USER_PORTAL_PASSWORD: ${{ secrets.USER_PORTAL_PASSWORD }}
+        USER_PORTAL_URL: ${{ secrets.USER_PORTAL_URL || 'http://127.0.0.1:3000' }}
+        USER_PORTAL_USERNAME: ${{ secrets.USER_PORTAL_USERNAME || 'testuser@example.com' }}
+        USER_PORTAL_PASSWORD: ${{ secrets.USER_PORTAL_PASSWORD || 'SecurePassword123!' }}
         TEST_PARALLEL: true
-        TEST_PARALLEL_WORKERS: 4
+        TEST_PARALLEL_WORKERS: 2
       run: npm test ${{ github.event.inputs.test_controller || 'Pipeline_RegressionTestController.csv' }}
 
-    - name: Upload Test Report Artifact
+    - name: Upload Test Results Artifact
       if: always()
       uses: actions/upload-artifact@v4
       with:
-        name: playwright-report-node-${{ matrix.node-version }}
-        path: AllTestResults/
+        name: test-results-node-${{ matrix.node-version }}
+        path: |
+          AllTestResults/
+          apps/playwright-report/
         retention-days: 30
+
+    - name: Prepare Report for GitHub Pages
+      if: matrix.node-version == '20.x' && always()
+      run: |
+        mkdir -p gh-pages-report
+        cp -r apps/playwright-report/* gh-pages-report/ 2>/dev/null || true
+        # Also copy the latest execution summary HTML
+        cp AllTestResults/HTMLReports/*/TestExecutionSummary.html gh-pages-report/summary.html 2>/dev/null || true
+
+    - name: Upload Pages Artifact
+      if: matrix.node-version == '20.x' && github.ref == 'refs/heads/main' && always()
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: gh-pages-report
+
+  deploy-pages:
+    needs: test
+    if: github.ref == 'refs/heads/main' && always()
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
