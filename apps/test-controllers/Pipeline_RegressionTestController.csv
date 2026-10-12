@@ -1,0 +1,5 @@
+Execute,testCaseID,testDescription,SpecFileName,Module
+Y,TC-472895,Verify successful login to user portal,loginSmoke,Login
+Y,TC-472896,Verify error alert on invalid credentials,loginSmoke,Login
+N,TC-472897,Verify disabled test does not run,loginSmoke,Login
+Y,TC-583910,Verify account summary balances display correctly,accountSummary,Accounts

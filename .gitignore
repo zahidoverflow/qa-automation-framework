@@ -1,0 +1,4 @@
+node_modules/
+test-results/
+apps/playwright-report/
+.DS_Store
