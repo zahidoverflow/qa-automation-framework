@@ -36,7 +36,11 @@
           "**/loginSmoke.spec.ts",
           "**/accountSummary.spec.ts",
           "**/fundTransfer.spec.ts",
-          "**/achTemplates.spec.ts"
+          "**/achTemplates.spec.ts",
+          "**/billPay.spec.ts",
+          "**/managePayees.spec.ts",
+          "**/profileSettings.spec.ts",
+          "**/accountActivity.spec.ts"
         ],
         "timeout": 30000
       }
@@ -59,7 +63,11 @@
           "**/loginSmoke.spec.ts",
           "**/accountSummary.spec.ts",
           "**/fundTransfer.spec.ts",
-          "**/achTemplates.spec.ts"
+          "**/achTemplates.spec.ts",
+          "**/billPay.spec.ts",
+          "**/managePayees.spec.ts",
+          "**/profileSettings.spec.ts",
+          "**/accountActivity.spec.ts"
         ],
         "timeout": 30000,
         "use": {
@@ -146,12 +154,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 846,
+                  "duration": 817,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-12T11:52:54.387Z",
+                  "startTime": "2026-10-12T12:06:20.210Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -188,12 +196,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 2052,
+                  "duration": 2040,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-12T11:52:54.367Z",
+                  "startTime": "2026-10-12T12:06:20.219Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -203,6 +211,192 @@
           ],
           "id": "2e3b614ec9d5241446c3-c084b05c7e843a3bc0a7",
           "file": "Regression/ACH/achTemplates.spec.ts",
+          "line": 9,
+          "column": 3
+        },
+        {
+          "title": "TC-728102: Verify validation error when ACH template name is empty",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1865,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-12T12:06:22.380Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e3b614ec9d5241446c3-7255efef45c900a074eb",
+          "file": "Regression/ACH/achTemplates.spec.ts",
+          "line": 9,
+          "column": 3
+        }
+      ]
+    },
+    {
+      "title": "Regression/Activity/accountActivity.spec.ts",
+      "file": "Regression/Activity/accountActivity.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-958201: Verify transaction activity history loads with records",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1270,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-12T12:06:21.151Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b03b897abb085cf6b57a-150fea20b39310253214",
+          "file": "Regression/Activity/accountActivity.spec.ts",
+          "line": 9,
+          "column": 3
+        },
+        {
+          "title": "TC-958202: Verify transaction filtering by credit deposit types",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1787,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-12T12:06:22.435Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b03b897abb085cf6b57a-2dccd943f5164232c13b",
+          "file": "Regression/Activity/accountActivity.spec.ts",
+          "line": 9,
+          "column": 3
+        }
+      ]
+    },
+    {
+      "title": "Regression/BillPay/billPay.spec.ts",
+      "file": "Regression/BillPay/billPay.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-819301: Verify successful bill payment submission to registered payee",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2042,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-12T12:06:24.252Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8e78510fbe343bc1376a-f5b84f67cca559a1a797",
+          "file": "Regression/BillPay/billPay.spec.ts",
+          "line": 9,
+          "column": 3
+        },
+        {
+          "title": "TC-819302: Verify bill pay form validation on zero or negative amount",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1949,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-12T12:06:26.317Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8e78510fbe343bc1376a-5a1d39d7dcea9646f414",
+          "file": "Regression/BillPay/billPay.spec.ts",
           "line": 9,
           "column": 3
         }
@@ -227,15 +421,15 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 720,
+                  "duration": 784,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-12T11:52:55.430Z",
+                  "startTime": "2026-10-12T12:06:24.272Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -261,15 +455,15 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 726,
+                  "duration": 727,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-12T11:52:56.162Z",
+                  "startTime": "2026-10-12T12:06:25.075Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -295,15 +489,15 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 1379,
+                  "duration": 1260,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-12T11:52:56.902Z",
+                  "startTime": "2026-10-12T12:06:25.812Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -314,6 +508,158 @@
           "id": "212221bb32574e590250-c89b972d00060428fafa",
           "file": "Regression/Login/loginSmoke.spec.ts",
           "line": 8,
+          "column": 3
+        }
+      ]
+    },
+    {
+      "title": "Regression/Payees/managePayees.spec.ts",
+      "file": "Regression/Payees/managePayees.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-849101: Verify adding new utility payee with account number",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1961,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-12T12:06:27.088Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7274a98ea39adb0b94fe-f0a3b8a54f30e4063cae",
+          "file": "Regression/Payees/managePayees.spec.ts",
+          "line": 9,
+          "column": 3
+        },
+        {
+          "title": "TC-849102: Verify payee registration rejection when required fields are missing",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1937,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-12T12:06:29.072Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7274a98ea39adb0b94fe-01341ad630bf8ab581cb",
+          "file": "Regression/Payees/managePayees.spec.ts",
+          "line": 9,
+          "column": 3
+        }
+      ]
+    },
+    {
+      "title": "Regression/Profile/profileSettings.spec.ts",
+      "file": "Regression/Profile/profileSettings.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-928401: Verify updating user email and contact preferences in profile",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1987,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-12T12:06:28.299Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "df7eaf333bcb60b73e4c-d71894d5ebddac642ec0",
+          "file": "Regression/Profile/profileSettings.spec.ts",
+          "line": 9,
+          "column": 3
+        },
+        {
+          "title": "TC-928402: Verify profile email validation rejects malformed address",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1959,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-12T12:06:30.296Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "df7eaf333bcb60b73e4c-9e583bd160cb873fd894",
+          "file": "Regression/Profile/profileSettings.spec.ts",
+          "line": 9,
           "column": 3
         }
       ]
@@ -340,12 +686,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 2017,
+                  "duration": 1863,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-12T11:52:56.650Z",
+                  "startTime": "2026-10-12T12:06:31.025Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -374,12 +720,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 1973,
+                  "duration": 1952,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-12T11:52:58.680Z",
+                  "startTime": "2026-10-12T12:06:32.900Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -391,15 +737,49 @@
           "file": "Regression/Transfers/fundTransfer.spec.ts",
           "line": 9,
           "column": 3
+        },
+        {
+          "title": "TC-619203: Verify error validation when source and destination accounts match",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1958,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-12T12:06:34.869Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2375ad503ffb37edc0f3-a0279199a60ef215d769",
+          "file": "Regression/Transfers/fundTransfer.spec.ts",
+          "line": 9,
+          "column": 3
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-12T11:52:53.666Z",
-    "duration": 7037.816,
-    "expected": 7,
+    "startTime": "2026-10-12T12:06:19.643Z",
+    "duration": 17233.994,
+    "expected": 17,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

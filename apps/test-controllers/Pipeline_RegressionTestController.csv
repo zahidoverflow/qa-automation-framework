@@ -6,4 +6,14 @@ N,TC-472897,Verify disabled test does not run,loginSmoke,Login
 Y,TC-583910,Verify account summary balances display correctly,accountSummary,Accounts
 Y,TC-619201,Verify internal funds transfer between accounts,fundTransfer,Transfers
 Y,TC-619202,Verify transfer validation when amount exceeds balance,fundTransfer,Transfers
+Y,TC-619203,Verify error validation when source and destination accounts match,fundTransfer,Transfers
 Y,TC-728101,Verify dynamic ACH payment template creation with unique timestamp,achTemplates,ACH
+Y,TC-728102,Verify validation error when ACH template name is empty,achTemplates,ACH
+Y,TC-819301,Verify successful bill payment submission to registered payee,billPay,BillPay
+Y,TC-819302,Verify bill pay form validation on zero or negative amount,billPay,BillPay
+Y,TC-849101,Verify adding new utility payee with account number,managePayees,Payees
+Y,TC-849102,Verify payee registration rejection when required fields are missing,managePayees,Payees
+Y,TC-928401,Verify updating user email and contact preferences in profile,profileSettings,Profile
+Y,TC-928402,Verify profile email validation rejects malformed address,profileSettings,Profile
+Y,TC-958201,Verify transaction activity history loads with records,accountActivity,Activity
+Y,TC-958202,Verify transaction filtering by credit deposit types,accountActivity,Activity

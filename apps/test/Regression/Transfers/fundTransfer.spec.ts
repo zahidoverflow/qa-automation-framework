@@ -30,6 +30,10 @@ for (const data of testCases) {
       // Transfer exceeding checking account limit
       await transfersPage.executeTransfer('checking', 'savings', '999999.00');
       await transfersPage.verifyTransferError('Transfer amount exceeds available checking balance');
+    } else if (data.testCaseID === 'TC-619203') {
+      // Source and destination account match validation
+      await transfersPage.executeTransfer('checking', 'checking', '50.00');
+      await transfersPage.verifyTransferError('Source and destination accounts must be different');
     }
   });
 }

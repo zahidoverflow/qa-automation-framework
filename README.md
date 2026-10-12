@@ -29,22 +29,38 @@ root/
 │   │   │   └── LogInLogOutUserPortal.page.ts ← LogInLogOutUserPortalPageCl
 │   │   └── User/
 │   │       ├── Accounts/
-│   │       │   └── AccountSummary.page.ts ← AccountSummaryPageCl
+│   │       │   └── AccountSummary.page.ts     ← AccountSummaryPageCl
 │   │       ├── Transfers/
-│   │       │   └── TransfersPage.page.ts  ← TransfersPageCl
-│   │       └── ACH/
-│   │           └── TemplatesPage.page.ts  ← TemplatesPageCl
+│   │       │   └── TransfersPage.page.ts      ← TransfersPageCl
+│   │       ├── ACH/
+│   │       │   └── TemplatesPage.page.ts      ← TemplatesPageCl
+│   │       ├── BillPay/
+│   │       │   └── BillPayPage.page.ts        ← BillPayPageCl
+│   │       ├── Payees/
+│   │       │   └── ManagePayeesPage.page.ts   ← ManagePayeesPageCl
+│   │       ├── Profile/
+│   │       │   └── ProfileSettingsPage.page.ts← ProfileSettingsPageCl
+│   │       └── Activity/
+│   │           └── AccountActivityPage.page.ts← AccountActivityPageCl
 │   │
 │   └── test/                             ← Test Specifications
 │       └── Regression/
 │           ├── Login/
-│           │   └── loginSmoke.spec.ts    ← Dynamic data-driven login test suite
+│           │   └── loginSmoke.spec.ts        ← Dynamic data-driven login suite
 │           ├── Accounts/
-│           │   └── accountSummary.spec.ts← Dynamic account balance validation suite
+│           │   └── accountSummary.spec.ts    ← Dynamic account balance validation
 │           ├── Transfers/
-│           │   └── fundTransfer.spec.ts  ← Funds transfer regression suite
-│           └── ACH/
-│               └── achTemplates.spec.ts  ← Dynamic ACH templates test suite
+│           │   └── fundTransfer.spec.ts      ← Funds transfer regression suite
+│           ├── ACH/
+│           │   └── achTemplates.spec.ts      ← Dynamic ACH templates test suite
+│           ├── BillPay/
+│           │   └── billPay.spec.ts           ← Bill payment scheduling & validation
+│           ├── Payees/
+│           │   └── managePayees.spec.ts      ← Dynamic payee registration & validation
+│           ├── Profile/
+│           │   └── profileSettings.spec.ts   ← User preference & email validation
+│           └── Activity/
+│               └── accountActivity.spec.ts   ← Activity history & transaction filters
 │
 ├── mock-app/                             ← Self-contained mock banking portal
 │   └── server.mjs                        ← Auto-spawned by Playwright webServer

@@ -29,6 +29,10 @@ for (const data of testCases) {
         'Bi-weekly direct deposit disbursement template'
       );
       await templatesPage.verifyTemplateInList(createdName);
+    } else if (data.testCaseID === 'TC-728102') {
+      // Validation error when submitting empty template
+      await templatesPage.submitEmptyTemplate();
+      await templatesPage.verifyTemplateError('Template name and description are required');
     }
   });
 }
