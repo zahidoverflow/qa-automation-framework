@@ -28,15 +28,23 @@ root/
 │   │   │   ├── BasePage.page.ts          ← Base page class
 │   │   │   └── LogInLogOutUserPortal.page.ts ← LogInLogOutUserPortalPageCl
 │   │   └── User/
-│   │       └── Accounts/
-│   │           └── AccountSummary.page.ts ← AccountSummaryPageCl
+│   │       ├── Accounts/
+│   │       │   └── AccountSummary.page.ts ← AccountSummaryPageCl
+│   │       ├── Transfers/
+│   │       │   └── TransfersPage.page.ts  ← TransfersPageCl
+│   │       └── ACH/
+│   │           └── TemplatesPage.page.ts  ← TemplatesPageCl
 │   │
 │   └── test/                             ← Test Specifications
 │       └── Regression/
 │           ├── Login/
 │           │   └── loginSmoke.spec.ts    ← Dynamic data-driven login test suite
-│           └── Accounts/
-│               └── accountSummary.spec.ts← Dynamic account balance validation suite
+│           ├── Accounts/
+│           │   └── accountSummary.spec.ts← Dynamic account balance validation suite
+│           ├── Transfers/
+│           │   └── fundTransfer.spec.ts  ← Funds transfer regression suite
+│           └── ACH/
+│               └── achTemplates.spec.ts  ← Dynamic ACH templates test suite
 │
 ├── mock-app/                             ← Self-contained mock banking portal
 │   └── server.mjs                        ← Auto-spawned by Playwright webServer
